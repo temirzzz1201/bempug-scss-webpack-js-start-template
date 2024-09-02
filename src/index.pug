@@ -1,0 +1,61 @@
+include ../node_modules/bempug/index
+- BEMPUG.modifier = '_';
+
+//- blocks imports
+include ./blocks/head/head
+include ./blocks/header/header
+include ./blocks/footer/footer
+include ./blocks/section/section
+
+//- components imports
+include ./components/input/input
+include ./components/paragraph/paragraph
+include ./components/card/card
+include ./components/form/form
+include ./components/monitor/monitor
+
+
+- const cards = [{ src: './public/images/img1.jpg', title: 'Unlimited exchange', subtitle: '2 props', button: 'Order'}, { src: './public/images/img2.jpg', title: 'International exchange', subtitle: '1 prop', button: 'Order'}, { src: './public/images/img3.jpg', title: 'Additional services', subtitle: '3 props, all', button: 'Order'}, { src: './public/images/img4.jpg', title: 'Support', subtitle: '5 props', button: 'Order'}, { src: './public/images/img5.jpg', title: 'Holiday works', subtitle: '2 props', button: 'Order', popup: true, popupTitle: 'Popup header', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo voluptatem architecto alias'}, { src: './public/images/img6.jpg', title: 'Postal delivery', subtitle: 'not in access', button: 'Order'}, { src: './public/images/img7.jpg', title: 'Document menegment', subtitle: '2 props', button: 'Order'}, { src: './public/images/img8.jpg', title: 'Promotions', subtitle: '1 prop', button: 'Order'}]
+
+doctype html
+html
+  +head({title: "Главная"})
+  body.main
+    +header({}, {})
+    +section({m: 'indent'})
+      .content 
+        +e('input-block', { m: 'search-input'})
+          +input({m: 'search'}, {
+            label: '',
+            title: 'ParrotWings Exchange',
+            icon: '#search',
+            field: {
+              required: false,
+              autocomplete: false,
+              name: 'search',
+              class: 'form-search',
+              placeholder: 'Search...'
+            }
+          })
+        +paragraph({m: 'content-title'}) Products
+        .content__wrapper
+          each item in cards 
+            +card({}, {
+              src: item.src,
+              subtitle: item.subtitle,
+              popup: item.popup,
+              popupTitle: item.popupTitle,
+              text: item.text,
+              title: item.title, 
+              button: item.button
+            })
+        a(href="#")(class="show-more") More products...
+      aside.aside 
+        +form()
+        +monitor({m: 'desctop'})
+    +monitor({m: 'mobile'})
+    +footer()
+
+
+
+

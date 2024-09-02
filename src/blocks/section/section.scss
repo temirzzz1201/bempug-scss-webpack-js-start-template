@@ -1,0 +1,32 @@
+.section {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: #ebebeb;
+
+  &__wrapper {
+    display: flex;
+
+    @media screen and(max-width: 845px) {
+      flex-direction: column;
+    }
+  }
+
+  &_indent {
+    padding: 50px 48px 30px;
+
+    @media screen and(max-width: 845px) {
+      padding: 0 30px;
+    }
+  }
+
+  &_bottom-indent {
+    padding: 0 0 42px 50px;
+  }
+
+  &_hide-on-mobile {
+    @media screen and(max-width: 845px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: center;
+  height: 155px;
+  width: 100%;
+  background: #000;
+  background-image: url("../../public/images/header_img.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media screen and(max-width: 845px) {
+    height: 110px;
+    background-position: 53% -42px;
+  }
+}

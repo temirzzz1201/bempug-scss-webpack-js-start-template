@@ -1,0 +1,90 @@
+.navbar {
+  $self: &;
+
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 20px;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+
+    &:hover {
+      background: #b3b4b3;
+      transition: 0.3s;
+
+      a {
+        color: #000;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 0%;
+      background: #00ff36;
+      bottom: 0;
+    }
+
+    &:hover:after {
+      content: "";
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  @media screen and(max-width: 845px) {
+    display: none;
+  }
+
+  &_mobile {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    background: #000;
+    padding-top: 120px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    #{$self}__menu {
+      flex-direction: column;
+    }
+
+    #{$self}__item:hover {
+      background: #000;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

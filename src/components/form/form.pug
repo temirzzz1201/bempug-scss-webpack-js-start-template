@@ -1,0 +1,47 @@
+include ../../components/input/input
+
+mixin form(bem, data)
+  +b('form', bem, 'form')&attributes(attributes)
+    +e('wrapper', {t: 'div'})
+      +e('input-block', { m: ''})
+        +input({m: 'in-form'}, {
+          label: '',
+          title: 'Sugn Up',
+          field: {
+            required: false,
+            autocomplete: false,
+            name: 'name',
+            class: 'form-search',
+            placeholder: 'First Name'
+          }
+        })
+      +e('input-block', { m: ''})
+        +input({m: 'in-form'}, {
+          label: '',
+          title: '',
+          field: {
+            required: false,
+            autocomplete: false,
+            name: 'last-name',
+            class: 'form-search',
+            placeholder: 'Last Name'
+          }
+        })
+      +e('input-block', { m: ''})
+        +input({m: 'in-form'}, {
+          label: '',
+          title: '',
+          field: {
+            required: false,
+            autocomplete: false,
+            type: 'email',
+            name: 'email',
+            class: 'form-search',
+            placeholder: 'Email'
+          }
+        })
+      span.form__info By creating a PW Exchange Account you acknowledge that you have to read, understood and agree to the 
+        a(href="#") Terms of Use  
+        |  and 
+        a(href="#") Privacy Policy.
+      +e('button', {t: 'button'}) Sugn Up

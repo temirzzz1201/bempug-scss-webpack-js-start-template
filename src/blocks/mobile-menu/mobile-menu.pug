@@ -1,0 +1,12 @@
+include ../navbar/navbar
+
+mixin mobile-menu(bem, data)
+  +b('mobile-menu', {})&attributes(attributes)
+    svg.search
+      use(xlink:href="#search")
+    +e('checkbox', {t: 'input'})(type='checkbox')
+    +e('burger')
+      +e('line line-first', {t: 'span'})
+      +e('line line-second', {t: 'span'})
+      +e('line line-third', {t: 'span'})
+    +navbar({m: "mobile"})

@@ -1,0 +1,85 @@
+.mobile-menu {
+  display: none;
+
+  .search {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    cursor: pointer;
+  }
+
+  &__item {
+    a {
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+    }
+  }
+
+  &__checkbox {
+    position: fixed;
+    height: 20px;
+    width: 30px;
+    top: 20px;
+    left: 16px;
+    z-index: 7;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__burger {
+    position: fixed;
+    height: 20px;
+    width: 30px;
+    top: 20px;
+    left: 16px;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__line {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #fff;
+  }
+
+  .line-first {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line-second {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .line-third {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  input[type="checkbox"]:checked ~ .navbar_mobile {
+    transform: translateX(0);
+  }
+
+  input[type="checkbox"]:checked ~ &__burger .line-first {
+    transform: rotate(45deg);
+  }
+
+  input[type="checkbox"]:checked ~ &__burger .line-second {
+    transform: scaleY(0);
+  }
+
+  input[type="checkbox"]:checked ~ &__burger .line-third {
+    transform: rotate(-45deg);
+  }
+
+  @media screen and(max-width: 845px) {
+    display: block;
+  }
+}

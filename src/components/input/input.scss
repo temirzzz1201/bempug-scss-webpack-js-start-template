@@ -1,0 +1,81 @@
+.input-block {
+  $self: &;
+
+  &_search {
+    display: flex;
+    justify-content: space-between;
+
+    #{$self}__title {
+      font-size: 26px;
+      margin-right: 20px;
+    }
+
+    #{$self}__field {
+      border: 1px solid #c2c2c2;
+      background: #efefef;
+      width: 100%;
+      min-width: 250px;
+      height: 40px;
+      padding-left: 12px;
+    }
+
+    #{$self}__field::placeholder,
+    #{$self}__field::-webkit-input-placeholder,
+    #{$self}__field::-moz-placeholder,
+    #{$self}__field::-ms-input-placeholder {
+      color: #c2c2c2;
+    }
+
+    #{$self}__wrapper {
+      position: relative;
+      max-height: 40px;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        fill: #c2c2c2;
+      }
+    }
+
+    @media screen and(max-width: 845px) {
+      display: none;
+    }
+  }
+
+  &_in-form {
+    #{$self}__title {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    #{$self}__title:after {
+      content: "";
+      display: flex;
+      width: 100%;
+      height: 1px;
+      background: #c5c5c5;
+      margin-top: 15px;
+    }
+
+    #{$self}__field {
+      border: 1px solid #c2c2c2;
+      background: #efefef;
+      width: 100%;
+      min-width: 250px;
+      height: 45px;
+      padding-left: 12px;
+      margin-bottom: 10px;
+    }
+
+    #{$self}__field::placeholder,
+    #{$self}__field::-webkit-input-placeholder,
+    #{$self}__field::-moz-placeholder,
+    #{$self}__field::-ms-input-placeholder {
+      color: #c2c2c2;
+    }
+  }
+}

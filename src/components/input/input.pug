@@ -1,0 +1,19 @@
+mixin input(bem, data)
+  +b('input-block', bem)(class="js-brand-input")&attributes(attributes)
+    if data.title
+      +e('title', {t: 'p'}) !{data.title}
+    +e('wrapper', {t: 'div'})
+      if data.label
+        +e('label')(class="js-input-label") !{data.label}
+          span !{data.field.required ? '*' : ''}
+      if data.icon
+        svg
+          use(xlink:href=data.icon)
+      +e('field', {t: 'input'})(
+        type=data.field.type ? data.field.type : 'text'
+        class=data.field.class
+        name=data.field.name
+        required=data.field.required
+        autocomplete=data.field.autocomplete
+        placeholder=data.field.placeholder ? data.field.placeholder : ''
+      )&attributes(inputAttributes)

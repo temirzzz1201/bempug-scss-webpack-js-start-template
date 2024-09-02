@@ -1,0 +1,52 @@
+mixin footer(bem, data)
+  +b('footer', bem)&attributes(attributes)
+    +e('wrapper', {m:''})
+      +e('logos')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo1.jpg')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo2.jpg')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo3.jpg')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo4.jpg')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo5.jpg')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo6.jpg')
+        +e('logos-links', {t: 'a'})(href="#")
+          +e('image', {t: 'img'})(src='./public/images/logo7.jpg')
+      +e('content')
+        +e('item')
+          +e('info', {t: 'a', m: 'bold'})(href="#") Recruitment Info
+          +e('info', {t: 'a'})(href="#") Candidate First Name: Username
+          +e('info', {t: 'a'})(href="#") Candidate Last Name: Username
+          +e('info', {t: 'a'})(href="#") Spent Time: X hours
+          +e('info', {t: 'a'})(href="#") Email: usernane@server.name
+          +e('info', {t: 'a'})(href="#") Test date: dd.mm.yyyy
+        +e('item')
+          +e('info', {t: 'a', m: 'bold'})(href="#") Resources
+          +e('info', {t: 'a'})(href="#") Loader icon - search on Fontello.com
+          +e('info', {t: 'a'})(href="#") Icon - Entypo
+          +e('info', {t: 'a'})(href="#") Fonts - search in this file
+          +e('info', {t: 'a'})(href="#") Background - standart situation:<br> designer lose file
+        +e('item')
+          +e('info', {t: 'a', m: 'bold'})(href="#") Navigation
+          +e('info', {t: 'a'})(href="#") Development
+          +e('info', {t: 'a'})(href="#") Application
+          +e('info', {t: 'a'})(href="#") Holding
+          +e('info', {t: 'a'})(href="#") About
+        +e('item', {m: 'web-links'})
+          +e('web', {t: 'div'})
+            +e('web-link', {t: 'a'})(href="#")
+              +e('web-image', {t: 'img'})(src='./public/images/web1.jpg')
+            +e('web-link', {t: 'a'})(href="#")
+              +e('web-image', {t: 'img'})(src='./public/images/web2.jpg')
+            +e('web-link', {t: 'a'})(href="#")
+              +e('web-image', {t: 'img'})(src='./public/images/web3.jpg')
+            +e('web-link', {t: 'a'})(href="#")
+              +e('web-image', {t: 'img'})(src='./public/images/web4.jpg')
+            +e('web-link', {t: 'a'})(href="#")
+              +e('web-image', {t: 'img'})(src='./public/images/web5.jpg')
+          +e('info', {t: 'p', m: 'description'}) Progect should work on next stack<br> EI11, actual version of Firefox, Chrome<br> on desctop and android, Opera (opera mini)<br> Safari on mac and ios
+        +e('web-logo', {t: 'img'})(src='./public/images/logo7.jpg')

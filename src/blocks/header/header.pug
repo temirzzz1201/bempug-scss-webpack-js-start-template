@@ -1,0 +1,11 @@
+include ../navbar/navbar
+include ../mobile-menu/mobile-menu
+include ../../components/baner/baner
+
+mixin header(bem, data)
+  +b('header', {})&attributes(attributes)
+    +navbar()
+    +baner()
+    +mobile-menu()
+
+

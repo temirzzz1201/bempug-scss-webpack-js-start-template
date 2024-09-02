@@ -1,0 +1,26 @@
+.paragraph {
+  $self: &;
+
+  &_content-title {
+    font-size: 20px;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @media screen and(max-width: 845px) {
+      margin: 24px;
+    }
+  }
+
+  &_content-title::before {
+    content: "";
+    display: flex;
+    width: 20px;
+    height: 5px;
+    background: #c62d2e;
+    margin-right: 7px;
+    margin-bottom: 2px;
+    margin-left: -27px;
+  }
+}

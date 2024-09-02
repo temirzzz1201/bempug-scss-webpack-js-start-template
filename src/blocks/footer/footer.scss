@@ -1,0 +1,136 @@
+.footer {
+  width: 100%;
+  min-height: 330px;
+  background: #090909;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1075px;
+    margin: 0 auto;
+    padding: 26px 0 45px;
+    height: inherit;
+    @media screen and(max-width: 1170px) {
+      padding: 26px 15px 45px;
+    }
+    @media screen and(max-width: 845px) {
+      padding: 37px 15px 60px;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media screen and(max-width: 845px) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__image {
+    @media screen and(max-width: 845px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__logos-links:last-child {
+    margin-left: 205px;
+
+    @media screen and(max-width: 1170px) {
+      margin-left: 0;
+    }
+
+    @media screen and(max-width: 845px) {
+      display: none;
+    }
+  }
+
+  &__image:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @media screen and(max-width: 845px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @media screen and(max-width: 845px) {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 55px;
+    }
+  }
+
+  &__info {
+    line-height: 28px;
+    color: #909090;
+    letter-spacing: -1px;
+    margin-right: 20px;
+    @media screen and(max-width: 845px) {
+      margin-right: 0;
+    }
+  }
+
+  &__info:last-child {
+    margin-right: 0;
+  }
+
+  &__info_bold {
+    color: #404040;
+    margin-bottom: 25px;
+    font-size: 22px;
+  }
+
+  &__web {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 170px;
+    margin-bottom: 20px;
+    @media screen and(max-width: 845px) {
+      align-self: unset;
+    }
+  }
+
+  &__item_web-links {
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 180px;
+    @media screen and(max-width: 1170px) {
+      margin-left: 0;
+      margin-bottom: 55px;
+    }
+  }
+
+  &__info_description {
+    text-align: end;
+    color: #5c5c5c;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    align-self: flex-end;
+    @media screen and(max-width: 845px) {
+      align-self: unset;
+      text-align: center;
+    }
+  }
+
+  &__web-logo {
+    width: 160px;
+    display: none;
+    @media screen and(max-width: 845px) {
+      display: block;
+    }
+  }
+}

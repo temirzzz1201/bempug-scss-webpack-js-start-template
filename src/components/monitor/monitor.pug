@@ -1,0 +1,7 @@
+include ../loader/loader
+
+mixin monitor(bem, data)
+  +b('monitor', bem)&attributes(attributes)
+    +e('title', {t: 'p'}) Online Monitor 
+    +loader()
+    +e('button', {t: 'button'}) Connect

@@ -1,0 +1,14 @@
+mixin card(bem, data)
+  +b('card', bem)&attributes(attributes)
+    +e('img-wrapper')
+      +e('card-img', {t: 'img' })( src=data.src)
+    +e('container', {t: 'div' })
+      +e('subtitle', {t: 'span' }) !{data.subtitle}
+      +e('title', {t: 'p' }) !{data.title}
+    if data.popup
+      +e('popup')
+        +e('popup-title') !{data.popupTitle}
+        +e('popup-text') !{data.text}
+      +e('btn', {t: 'button'}) !{data.button}
+    else 
+      +e('btn', {t: 'button'}) !{data.button}

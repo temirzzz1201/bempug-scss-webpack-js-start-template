@@ -1,0 +1,45 @@
+.form {
+  background: #dcdcdc;
+  padding: 20px;
+  width: 100%;
+  min-height: 375px;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    font-size: 10px;
+    color: #030303;
+    margin: 3px 0 20px 0;
+    text-align: center;
+
+    a {
+      font-size: 10px;
+      color: #030303;
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    width: 140px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    align-self: flex-end;
+    color: #969696;
+    cursor: pointer;
+  }
+
+  &__button:hover {
+    background: #454545;
+    color: #fff;
+    transition: 0.3s;
+  }
+
+  @media screen and(max-width: 845px) {
+    display: none;
+  }
+}

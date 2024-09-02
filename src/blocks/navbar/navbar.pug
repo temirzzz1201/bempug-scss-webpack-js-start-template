@@ -1,0 +1,17 @@
+mixin navbar(bem, data)
+  +b('navbar', bem, {t: 'nav'})&attributes(attributes)
+    +e('menu', {t: 'ul'})
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") Home
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") Credits
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") Exchange
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") Partners
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") Stock
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") Holding
+      +e('item', {t: 'li'})
+        +e('link', {t: 'a'})(href="#") About

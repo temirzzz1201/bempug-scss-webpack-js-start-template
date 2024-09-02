@@ -1,0 +1,8 @@
+
+/node_modules/
+/dist/
+.idea/
+/coverage/
+.DS_Store
+yarn.lock
+

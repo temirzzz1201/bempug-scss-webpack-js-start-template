@@ -1,0 +1,32 @@
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  &__spiner {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border: 4px solid #4a4a4b;
+    border-radius: 50%;
+    border-bottom: none;
+    border-left: 10px solid #4a4a4b;
+    border-left-width: 5px;
+    animation: animate 2s linear infinite;
+  }
+
+  &__title {
+    color: #646464;
+    margin-top: 65px;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
